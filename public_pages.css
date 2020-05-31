@@ -29,6 +29,13 @@ nav{
     text-decoration: none;
     
 }
+
+header.sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
 .header{
     display: flex;
     padding: 0%;
@@ -88,15 +95,11 @@ nav{
     clear: both;
 }
 .article_text{
-    
     font-family: cursive;
     text-align: center;
     color: black;
     text-decoration: none;
-    
 }
-
-
 
 footer {
     position: relative;
