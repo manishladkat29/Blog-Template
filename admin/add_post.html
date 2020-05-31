@@ -4,13 +4,14 @@
         <title>My Blog</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="admin-pages.css">
     </head>
     <body>
-        <header>
+        <header class="forms_header">
             <h3>Add Post</h3>
         </header>
         <main>
-            <section>
+            <section class="forms">
                 <form>
                     <table>
                         <tr>
@@ -18,7 +19,7 @@
                                 <span>Post Title: </span>
                             </td>
                             <td>
-                                <input type="text" name="post_title">
+                                <input type="text" name="post_title" class="post_title">
                             </td>
                         </tr>
                         <tr>
@@ -26,7 +27,7 @@
                                 <span>Post Content: </span>
                             </td>
                             <td>
-                                <textarea name="post_text"></textarea>
+                                <textarea name="post_text" class="post_text"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -41,6 +42,6 @@
         </main>
     </body>
     <footer>
-        <p>&copy; Copyright 2020</p>
+        <p class="copyright">&copy; Copyright 2020</p>
     </footer>
 </html>
