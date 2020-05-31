@@ -7,7 +7,7 @@
 
 .forms{
     padding: 5vw;
-    background-color: rgb(228, 225, 225);
+    background-color: rgb(241, 238, 238);
     text-align: left;
 }
 
@@ -20,12 +20,6 @@
     width: 50vw;
 }
 
-
-.forms{
-    padding: 5vw;
-    background-color: rgb(228, 225, 225);
-}
-
 td{
     padding: 5px;
 }
@@ -36,7 +30,7 @@ td{
     justify-content: center;
     text-align: center;
     border-style:solid;
-    background-color: rgb(228, 225, 225);
+    background-color: rgb(241, 238, 238);
 }
 
 .lists_table td{
@@ -63,6 +57,7 @@ footer {
     position: relative;
     height: 50px;
     width: 100%;
+    background-color: rgb(236, 227, 227);
 }
 
 p.copyright {
