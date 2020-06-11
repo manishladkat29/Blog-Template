@@ -13,9 +13,9 @@
                 <h1 class="title">My Blog</h1>
                 <nav class="nav_bar">
                     <div class="nav_div">
-                        <a class="nav_links" href=#>Font Resizer</a>
+                        <button class="nav_links" onclick="fontResizer()">Font Resizer</button>
                         <span> | </span>
-                        <a class="nav_links" href=#>Style Switcher</a>
+                        <button class="nav_links">Style Switcher</button>
                         <span> | </span>
                         <a class="nav_links" href="admin/login.html">Admin Login</a>
                     </div>
@@ -23,53 +23,125 @@
             </section>
         </header>
         <main>
-            <section>
-                <img width="100%" src="res/Banner.png">
-            </section>
-            <section  class="posts">
-                <div id="post_head">
-                    <h2>Posts</h2>
+            <section class="bg_container">
+                <div class="background_slides fade">
+                    <img width="100%" src="res/Banner1.jpg">
                 </div>
-                <article class="row">
+                <div class="background_slides fade">
+                    <img width="100%" src="res/Banner2.jpg">
+                </div>
+                <div class="background_slides fade">
+                    <img width="100%" src="res/Banner3.jpg">
+                </div>
+                <div class="dot_container">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </section>
+            <section  class="posts slideshow-container">
+                <article id="row" class="row postSlides fade">
                     <a href="post.html">
                         <div class="column">
                             <article>
-                                <h3>Post 1</h3>
-                                <p>Post 1 text is diplayed.</p>        
-                            </article>
-                        </div>
-                    </a>
-                    <a href="post.html">
-                        <div class="column">
-                            <article>
-                                <h3>Post 2</h3>
-                                <p>Post 2 text is diplayed</p>        
+                                <div class="numbertext">1 / 4</div>
+                                <h3 id="article-text" class="article-text">Post 1</h3>
+                                <p class="article-text">Post 1 text is displayed.</p>        
                             </article>
                         </div>
                     </a>
                 </article>
-                <article class="row">
+                <article id="row" class="row postSlides fade">
                     <a href="post.html">
                         <div class="column">
                             <article>
-                                <h3>Post 3</h3>
-                                <p>Post 3 text is diplayed</p>        
+                                <div class="numbertext">2 / 4</div>
+                                <h3 class="article-text">Post 2</h3>
+                                <p class="article-text">Post 2 text is displayed</p>        
                             </article>
                         </div>
                     </a>
+                </article>
+                <article id="row" class="row postSlides fade">
                     <a href="post.html">
                         <div class="column">
                             <article>
-                                <h3>Post 4</h3>
-                                <p>Post 4 text is diplayed</p>        
+                                <div class="numbertext">3 / 4</div>
+                                <h3 class="article-text">Post 3</h3>
+                                <p class="article-text">Post 3 text is displayed</p>        
+                            </article>
+                        </div>
+                    </a>
+                </article>
+                <article id="row" class="row postSlides fade">
+                    <a href="post.html">
+                        <div class="column">
+                            <article>
+                                <div class="numbertext">4 / 4</div>
+                                <h3 class="article-text">Post 4</h3>
+                                <p class="article-text">Post 4 text is displayed</p>        
                             </article>
                         </div>    
                     </a>
                 </article>
+                <a class="prev" onclick="plusPostSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusPostSlides(1)">&#10095;</a>
             </section>
         </main>
         <footer>
-            <p class="copyright">&copy; Copyright 2020</p>
+            <p id="copyright" class="copyright">&copy; Copyright 2020</p>
         </footer>
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("background_slides");
+                var dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+            }
+
+            function fontResizer(){
+                document.getElementById("copyright").style.fontSize = "xx-large";
+                document.getElementById("article-text").style.fontSize = "xx-large";
+            }
+
+
+            var slidePostIndex = 1;
+            showPostSlides(slidePostIndex);
+
+            function plusPostSlides(n) {
+                showPostSlides(slidePostIndex += n);
+            }
+
+            function currentPostSlide(n) {
+                showPostSlides(slidePostIndex = n);
+            }
+
+            function showPostSlides(n) {
+                var i;
+                var slidesPost = document.getElementsByClassName("postSlides");
+                if (n > slidesPost.length) {slidePostIndex = 1}     
+                if (n < 1) {slidePostIndex = slidesPost.length}
+                for (i = 0; i < slidesPost.length; i++) {
+                    slidesPost[i].style.display = "none";  
+                }
+                slidesPost[slidePostIndex-1].style.display = "block";
+            }
+            
+        </script>
     </body>
 </html>
