@@ -1,0 +1,2 @@
+My name is ManishSome thing appended.
+Node.js allows you to run JavaScript code outside of a browser window, offering powerful tools to interact with a computer filesystem, run web servers, and create terminal applications. Node handles these tasks by running asynchronously, which means that reading user input from a terminal isn’t as simple as calling a getInput() function. In this article, we’ll show you an easy way around that (and some tips and tricks for handling user input) by using a helpful Node module.
