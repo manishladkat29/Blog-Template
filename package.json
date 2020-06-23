@@ -1,0 +1,22 @@
+{
+  "name": "manish_801167905",
+  "version": "1.0.0",
+  "description": "Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishladkat29/manish_801167905.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishladkat29/manish_801167905/issues"
+  },
+  "homepage": "https://github.com/manishladkat29/manish_801167905#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}
