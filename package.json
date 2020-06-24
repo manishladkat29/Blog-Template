@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/manishladkat29/manish_801167905#readme",
   "dependencies": {
+    "mongodb": "^3.5.9",
     "mysql": "^2.18.1"
   }
 }
