@@ -12,14 +12,14 @@
         </header>
         <main>
             <section class="forms">
-                <form>
+                <form action="/add_post" method="POST">
                     <table>
                         <tr>
                             <td>
                                 <span>Post Title: </span>
                             </td>
                             <td>
-                                <input type="text" name="post_title" class="post_title">
+                                <input type="text" name="post_title" placeholder="post_title" class="post_title">
                             </td>
                         </tr>
                         <tr>
@@ -27,7 +27,7 @@
                                 <span>Post Content: </span>
                             </td>
                             <td>
-                                <textarea name="post_text" class="post_text"></textarea>
+                                <textarea name="post_text" class="post_text" placeholder="post_text"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -38,6 +38,7 @@
                         </tr>
                     </table>
                 </form>
+                <span id="add_post_result"></span>
             </section>
         </main>
     </body>
