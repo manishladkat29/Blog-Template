@@ -1,0 +1,28 @@
+{
+  "name": "manish_801167905",
+  "version": "1.0.0",
+  "description": "This is the initial README file for the course",
+  "main": "homepage.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manishladkat29/manish_801167905.git"
+  },
+  "author": "Manish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manishladkat29/manish_801167905/issues"
+  },
+  "homepage": "https://github.com/manishladkat29/manish_801167905#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

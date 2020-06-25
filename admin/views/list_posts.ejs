@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" type="text/css" href="/css/admin-pages.css">
+    </head>
+    <body>
+        <header class="forms_header">
+            <h3>Post List</h3>
+        </header>
+        <main>
+            <section class="lists">
+                <span></span>
+                <table class="lists_table">
+                    <tr>
+                        <td colspan="1">Post Title</td>
+                        <td colspan="4">Operations</td>
+                    </tr>
+
+                    <% for(var i = 0; i < posts.length; i++) {%>
+                        <tr>
+                            <td><%= posts[i].post_title %></td>
+                            <td><a href="/read_post?id=<%= posts[i]._id %>"><i class="material-icons colorme">remove_red_eye</i></a></td>
+                            <td><a href="/update_post?id=<%= posts[i]._id %>"><i class="material-icons colorme">edit</i></a></td>
+                            <td><a href="/delete_post?id=<%= posts[i]._id %>"><i class="material-icons colorme">delete</i></a></td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" id="<%= posts[i]._id %>" onclick="checkbox('<%= posts[i]._id %>')" <%= posts[i].status %>>
+                                    <div class="slider"></div>
+                                </label>
+                            </td>
+                        </tr>
+                    <% } %> 
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p class="copyright">&copy; Copyright 2020</p>
+        </footer>
+        <script src="/js/adminpages.js"></script>
+    </body>
+</html>
