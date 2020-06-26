@@ -19,7 +19,7 @@
                                 <span>Post Title: </span>
                             </td>
                             <td>
-                                <input type="text" name="post_title" placeholder="post_title" class="post_title">
+                                <input type="text" id="post_title" name="post_title" placeholder="post_title" class="post_title">
                             </td>
                         </tr>
                         <tr>
@@ -27,7 +27,7 @@
                                 <span>Post Content: </span>
                             </td>
                             <td>
-                                <textarea name="post_text" class="post_text" placeholder="post_text"></textarea>
+                                <textarea id="post_text" name="post_text" class="post_text" placeholder="post_text"></textarea>
                             </td>
                         </tr>
                         <tr>
@@ -38,8 +38,15 @@
                         </tr>
                     </table>
                 </form>
+                <h3>OR</h3>
+                <h4>Upload a file</h4>
+                <form action="/uploadfile" enctype="multipart/form-data" method="post">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload">
+                </form>
             </section>
         </main>
+        <script src="/js/adminpages.js"></script>
     </body>
     <footer>
         <p class="copyright">&copy; Copyright 2020</p>

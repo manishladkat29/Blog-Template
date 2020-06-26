@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="/css/admin-pages.css">
+    </head>
+    <body>
+        <header class="forms_header">
+            <h3>Add User</h3>
+        </header>
+        <main>
+            <section class="forms">
+                <form action="/add_user_submit" method="POST">
+                    <table>
+                        <tr>
+                            <td>
+                                <span>Username: </span>
+                            </td>
+                            <td>
+                                <input type="text" name="name" class="name" placeholder="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Password: </span>
+                            </td>
+                            <td>
+                                <input type="password" name="password" class="password" placeholder="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Add User">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p class="copyright">&copy; Copyright 2020</p>
+        </footer>
+    </body>
+</html>

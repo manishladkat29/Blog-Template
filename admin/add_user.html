@@ -4,7 +4,7 @@
         <title>My Blog</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" type="text/css" href="admin-pages.css">
+        <link rel="stylesheet" type="text/css" href="/css/admin-pages.css">
     </head>
     <body>
         <header class="forms_header">
@@ -12,14 +12,14 @@
         </header>
         <main>
             <section class="forms">
-                <form>
+                <form action="/users" method="POST">
                     <table>
                         <tr>
                             <td>
                                 <span>Username: </span>
                             </td>
                             <td>
-                                <input type="text" name="user_name">
+                                <input type="text" name="name" class="name" placeholder="name">
                             </td>
                         </tr>
                         <tr>
@@ -27,13 +27,13 @@
                                 <span>Password: </span>
                             </td>
                             <td>
-                                <input type="password" name="user_password" >
+                                <input type="password" name="password" class="password" placeholder="password">
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <input type="submit" value="Add User" name="Add User">
+                                <input type="submit" value="Add User">
                             </td>
                         </tr>
                     </table>

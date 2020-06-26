@@ -7,6 +7,11 @@ var url = "mongodb://localhost:27017/";
 
 app.set('view engine', 'ejs');
 
+app.use(express.json());
+
+const usersRouter = require("./routes/users.js");
+app.use("/users", usersRouter);
+
 app.use(express.static(__dirname + '/static'));
 
 app.use(bodyParser.urlencoded({ extended: true }))
@@ -65,7 +70,7 @@ app.get('/list_posts', (req, res) => {
                 res.render('list_posts.ejs', { posts: results });
             });
     });
-})
+});
 
 app.get('/read_post', (req, res) => {
     MongoClient.connect(url, function(err, db) {
