@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/admin_login', (req, res)=> {
-    res.redirect('http://localhost:4000/');
+    res.redirect('http://localhost:5000/');
 });
 
 app.get('/post', (req, res)=> {
