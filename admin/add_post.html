@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="admin-pages.css">
+    </head>
+    <body>
+        <header class="forms_header">
+            <h3>Add Post</h3>
+        </header>
+        <main>
+            <section class="forms">
+                <form action="/add_post" method="POST">
+                    <table>
+                        <tr>
+                            <td>
+                                <span>Post Title: </span>
+                            </td>
+                            <td>
+                                <input type="text" name="post_title" placeholder="post_title" class="post_title">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>Post Content: </span>
+                            </td>
+                            <td>
+                                <textarea name="post_text" class="post_text" placeholder="post_text"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Add Post">
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <span id="add_post_result"></span>
+            </section>
+        </main>
+    </body>
+    <footer>
+        <p class="copyright">&copy; Copyright 2020</p>
+    </footer>
+</html>

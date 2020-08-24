@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" type="text/css" href="public_pages.css">
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="sticky">
+            <section class="header">
+                <h1 class="title">My Blog</h1>
+                <nav class="nav_bar">
+                    <div class="nav_div">
+                        <button class="nav_links" onclick="fontResizer()">Font Resizer</button>
+                        <span> | </span>
+                        <button class="nav_links">Style Switcher</button>
+                        <span> | </span>
+                        <a class="nav_links" href="admin/login.html">Admin Login</a>
+                    </div>
+                </nav>
+            </section>
+        </header>
+        <main>
+            <section class="bg_container">
+                <div class="background_slides fade">
+                    <img width="100%" src="res/Banner1.jpg">
+                </div>
+                <div class="background_slides fade">
+                    <img width="100%" src="res/Banner2.jpg">
+                </div>
+                <div class="background_slides fade">
+                    <img width="100%" src="res/Banner3.jpg">
+                </div>
+                <div class="dot_container">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </section>
+            <section  class="posts slideshow-container">
+                <article id="row" class="row postSlides fade">
+                    <a href="post.html">
+                        <div class="column">
+                            <article>
+                                <div class="numbertext">1 / 4</div>
+                                <h3 id="article-text" class="article-text">Post 1</h3>
+                                <p class="article-text">Post 1 text is displayed.</p>        
+                            </article>
+                        </div>
+                    </a>
+                </article>
+                <article id="row" class="row postSlides fade">
+                    <a href="post.html">
+                        <div class="column">
+                            <article>
+                                <div class="numbertext">2 / 4</div>
+                                <h3 class="article-text">Post 2</h3>
+                                <p class="article-text">Post 2 text is displayed</p>        
+                            </article>
+                        </div>
+                    </a>
+                </article>
+                <article id="row" class="row postSlides fade">
+                    <a href="post.html">
+                        <div class="column">
+                            <article>
+                                <div class="numbertext">3 / 4</div>
+                                <h3 class="article-text">Post 3</h3>
+                                <p class="article-text">Post 3 text is displayed</p>        
+                            </article>
+                        </div>
+                    </a>
+                </article>
+                <article id="row" class="row postSlides fade">
+                    <a href="post.html">
+                        <div class="column">
+                            <article>
+                                <div class="numbertext">4 / 4</div>
+                                <h3 class="article-text">Post 4</h3>
+                                <p class="article-text">Post 4 text is displayed</p>        
+                            </article>
+                        </div>    
+                    </a>
+                </article>
+                <a class="prev" onclick="plusPostSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusPostSlides(1)">&#10095;</a>
+            </section>
+        </main>
+        <footer>
+            <p id="copyright" class="copyright">&copy; Copyright 2020</p>
+        </footer>
+        <script src="homepage.js"></script>
+    </body>
+</html>

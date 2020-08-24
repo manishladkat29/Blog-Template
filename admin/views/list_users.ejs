@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Blog</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" type="text/css" href="/css/admin-pages.css">
+    </head>
+    <body>
+        <header class="forms_header">
+            <h3>User List</h3>
+        </header>
+        <main>
+            <section class="lists">
+                <span></span>
+                <table class="lists_table">
+                    <tr>
+                        <td colspan="1">Username</td>
+                        <td colspan="3">Operations</td>
+                    </tr>
+                    <% for(var i = 0; i < data.length; i++) {%>
+                    <tr>
+                        <td><%= data[i].name %></td>
+                        <td><a href="/update_user?id=<%= data[i]._id %>"><i class="material-icons colorme">edit</i></a></td>
+                        <td><a href="/delete_user_ind?id=<%= data[i]._id %>"><i class="material-icons colorme">delete</i></a></td>
+                        <td>
+                            <label class="switch">
+                                <input type="checkbox" id="<%= data[i]._id %>" onclick="user_checkbox('<%= data[i]._id %>')" <%= data[i].status %>>
+                                <div class="slider"></div>
+                            </label>
+                        </td>
+                    </tr>
+                    <% } %> 
+                </table>
+            </section>
+        </main>
+        <footer>
+            <p class="copyright">&copy; Copyright 2020</p>
+        </footer>
+        <script src="/js/adminpages.js"></script>
+    </body>
+</html>
